@@ -7,7 +7,7 @@ import { getInflationLoss } from "@/lib/mock-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Prospera  " },
+      { title: "Seedling — Your first investment, made calm" },
       { name: "description", content: "Honest, jargon-free first investment app. Show worst case + best case. Built for 18-22." },
       { property: "og:title", content: "Seedling" },
       { property: "og:description", content: "Your first investment, made calm." },
@@ -22,16 +22,16 @@ function Splash() {
   const loss = today - tenYears;
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <div className="gradient-mesh absolute inset-x-0 top-0 h-[100vh]" />
+      <div className="gradient-mesh absolute inset-x-0 top-0 h-[55vh]" />
       <Container className="relative z-10 flex min-h-screen flex-col">
         <div className="pt-8 text-[15px] font-normal text-[var(--ink)]">
           <span className="inline-flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-[var(--brand-indigo)]" />
-            Prospera
+            Seedling
           </span>
         </div>
 
-        <div className="flex flex-1 flex-col justify-center py-8">
+        <div className="flex flex-1 flex-col justify-center py-16">
           <div className="eyebrow mb-4">The honest truth</div>
           <h1 className="display-xxl text-[var(--ink)]">
             Doing nothing<br />

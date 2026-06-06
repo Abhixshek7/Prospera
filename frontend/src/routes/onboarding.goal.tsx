@@ -31,7 +31,7 @@ function GoalPage() {
           <ProgressDots step={2} total={4} />
           <div className="w-12" />
         </div>
-        <div className="mt-8">
+        <div className="mt-12">
           <div className="eyebrow mb-3">Step 2 of 4</div>
           <h1 className="display-xl">
             {name ? `${name}, what's` : "What's"} this money for?

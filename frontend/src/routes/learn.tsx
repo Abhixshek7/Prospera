@@ -21,7 +21,7 @@ function LearnPage() {
 
   return (
     <Shell>
-      <div className=" h-40" />
+      <div className="gradient-mesh h-40" />
       <Container className="-mt-24">
         <div className="rounded-2xl border border-[var(--hairline)] bg-white p-5 shadow-sm">
           <div className="eyebrow">{name ? `Hey, ${name}` : "Welcome"}</div>
