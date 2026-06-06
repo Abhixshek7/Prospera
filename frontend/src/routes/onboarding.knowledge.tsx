@@ -51,7 +51,7 @@ function KnowledgePage() {
                   className={`w-full rounded-2xl border p-5 text-left transition-all ${
                     active
                       ? "border-[var(--brand-indigo)] bg-[var(--brand-indigo-subdued)]/20"
-                      : "border-[var(--hairline)] bg-white hover:border-[var(--brand-indigo-soft)]"
+                      : "border-[var(--hairline)] bg-card hover:border-[var(--brand-indigo-soft)]"
                   }`}
                 >
                   <div className="text-[16px] text-[var(--ink)]">{l.title}</div>

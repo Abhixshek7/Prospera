@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { BottomNav } from "./BottomNav";
+import { DesktopSidebar } from "./DesktopSidebar";
 import { SharedTopbar } from "../SharedTopbar";
 import { useUserStore } from "@/lib/stores";
 import { useNavigate } from "@tanstack/react-router";
@@ -23,7 +24,6 @@ export function Shell({
     navigate({ to: "/" });
   };
 
-  // Get initials from user name
   const initials = name
     ? name
         .split(" ")
@@ -34,27 +34,37 @@ export function Shell({
     : "U";
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {!hideTopbar && !hideNav && (
-        <div className="mx-auto w-full max-w-xl">
-          <SharedTopbar
-            brandLink="/learn"
-            brandTitle="Prospera"
-            showSuperAdminBadge={false}
-            showSearch={true}
-            searchValue={search}
-            onSearchChange={setSearch}
-            unreadCount={3}
-            notificationsLink="/learn"
-            initials={initials}
-            userName={name || "Investor"}
-            userJobTitle="New Investor"
-            profileLink="/profile"
-            onLogout={handleLogout}
-          />
-        </div>
-      )}
-      <main className={hideNav ? "pb-8" : "pb-28"}>{children}</main>
+    <div className="min-h-screen bg-background text-foreground flex">
+      {/* Desktop sidebar — hidden on mobile/tablet */}
+      {!hideNav && <DesktopSidebar />}
+
+      {/* Main content column */}
+      <div className={`flex flex-col flex-1 min-w-0 ${!hideNav ? "md:ml-60" : ""}`}>
+        {/* Topbar — only shown on desktop (md+), replaced by dock label on mobile */}
+        {!hideTopbar && !hideNav && (
+          <div className="hidden md:block w-full">
+            <SharedTopbar
+              brandLink="/learn"
+              brandTitle="Prospera"
+              showSuperAdminBadge={false}
+              showSearch={true}
+              searchValue={search}
+              onSearchChange={setSearch}
+              unreadCount={3}
+              notificationsLink="/learn"
+              initials={initials}
+              userName={name || "Investor"}
+              userJobTitle="New Investor"
+              profileLink="/profile"
+              onLogout={handleLogout}
+            />
+          </div>
+        )}
+
+        <main className={hideNav ? "pb-8" : "pb-28 md:pb-8"}>{children}</main>
+      </div>
+
+      {/* Mobile/tablet dock — hidden on desktop */}
       {!hideNav && <BottomNav />}
     </div>
   );

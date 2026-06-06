@@ -47,7 +47,7 @@ function Portfolio() {
     <Shell>
       <div className=" h-40" />
       <Container className="-mt-28">
-        <div className="rounded-2xl border border-[var(--hairline)] p-5 shadow-sm">
+        <div className="rounded-2xl border border-[var(--hairline)] bg-card p-5 shadow-sm">
           <div className="eyebrow">Current value</div>
           <div className="tnum mt-1 text-4xl font-light text-[var(--ink)]">{formatINR(current)}</div>
           <div className="mt-2 inline-flex items-center gap-1 text-[13px]" style={{ color: pnl >= 0 ? "var(--success)" : "var(--brand-ruby)" }}>

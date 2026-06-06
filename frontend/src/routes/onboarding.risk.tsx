@@ -58,7 +58,7 @@ function RiskPage() {
                 <button
                   key={o.label}
                   onClick={() => answer(o.score)}
-                  className="w-full rounded-2xl border border-[var(--hairline)] bg-white p-5 text-left transition-all hover:border-[var(--brand-indigo-soft)]"
+                  className="w-full rounded-2xl border border-[var(--hairline)] bg-card p-5 text-left transition-all hover:border-[var(--brand-indigo-soft)]"
                 >
                   <div className="text-[15px] text-[var(--ink)]">{o.label}</div>
                 </button>
