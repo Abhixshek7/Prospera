@@ -123,6 +123,16 @@
 }
 
 .dark {
+  /* Brand tokens in dark mode */
+  --canvas: oklch(0.129 0.042 264.695);
+  --canvas-soft: oklch(0.18 0.03 260);
+  --canvas-cream: oklch(0.22 0.03 260);
+  --ink: oklch(0.984 0.003 247.858);
+  --ink-secondary: oklch(0.85 0.01 247.858);
+  --ink-mute: oklch(0.65 0.02 247.858);
+  --hairline: oklch(1 0 0 / 10%);
+  --hairline-input: oklch(1 0 0 / 15%);
+
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);

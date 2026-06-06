@@ -34,7 +34,7 @@ function Sim() {
         <div className="eyebrow">Simulate</div>
         <h1 className="display-lg mt-1">If you invested in {opt.name}…</h1>
 
-        <div className="mt-6 rounded-2xl border border-[var(--hairline)] bg-white p-5">
+        <div className="mt-6 rounded-2xl border border-[var(--hairline)] bg-card p-5">
           <div className="flex items-baseline justify-between">
             <div className="text-[13px] text-[var(--ink-mute)]">Amount</div>
             <div className="tnum text-3xl font-light">{formatINR(amount)}</div>
@@ -65,7 +65,7 @@ function Sim() {
           </div>
         </div>
 
-        <div className="mt-4 rounded-2xl border border-[var(--hairline)] bg-white p-5">
+        <div className="mt-4 rounded-2xl border border-[var(--hairline)] bg-card p-5">
           <div className="flex items-baseline justify-between">
             <div className="text-[13px] text-[var(--ink-mute)]">For how long?</div>
             <div className="tnum text-2xl font-light">
@@ -82,7 +82,7 @@ function Sim() {
           />
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[var(--hairline)] bg-white p-5">
+        <div className="mt-6 rounded-2xl border border-[var(--hairline)] bg-card p-5">
           <div className="eyebrow mb-2">Projection · year by year</div>
           <div className="h-56">
             <ResponsiveContainer width="100%" height="100%">
@@ -154,7 +154,7 @@ function Legend({ color, label }: { color: string; label: string }) {
 
 function Outcome({ label, value, color }: { label: string; value: number; color: string }) {
   return (
-    <div className="rounded-xl border border-[var(--hairline)] bg-white p-3 text-center">
+    <div className="rounded-xl border border-[var(--hairline)] bg-card p-3 text-center">
       <div className="eyebrow text-[10px]">{label}</div>
       <div className="tnum mt-1 text-[16px]" style={{ color }}>
         {formatINR(value)}

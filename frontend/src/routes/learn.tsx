@@ -21,9 +21,9 @@ function LearnPage() {
 
   return (
     <Shell>
-      <div className="gradient-mesh h-40" />
-      <Container className="-mt-24">
-        <div className="rounded-2xl border border-[var(--hairline)] bg-white p-5 shadow-sm">
+      <div className=" h-10" />
+      <Container className="">
+        <div className="rounded-2xl border border-[var(--hairline)] bg-card p-5 shadow-sm">
           <div className="eyebrow">{name ? `Hey, ${name}` : "Welcome"}</div>
           <h1 className="display-lg mt-1">Learn the basics first.</h1>
           <p className="mt-2 text-[14px] text-[var(--ink-mute)]">
@@ -48,7 +48,7 @@ function LearnPage() {
                 key={l.slug}
                 to="/learn/$slug"
                 params={{ slug: l.slug }}
-                className="block rounded-2xl border border-[var(--hairline)] bg-white p-5 transition-all hover:border-[var(--brand-indigo-soft)]"
+                className="block rounded-2xl border border-[var(--hairline)] bg-card p-5 transition-all hover:border-[var(--brand-indigo-soft)]"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">

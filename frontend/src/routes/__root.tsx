@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Seedling — Your first investment app" },
+      { title: "Prospera" },
       { name: "description", content: "A calm, honest first-investment app for new investors." },
       { name: "author", content: "Seedling" },
       { property: "og:title", content: "Seedling — Your first investment app" },

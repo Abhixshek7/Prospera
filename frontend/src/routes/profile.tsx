@@ -47,7 +47,7 @@ function Profile() {
           <Stat label="Lessons" value={`${completed.length}/${LESSONS.length}`} tnum />
         </div>
 
-        <div className="mt-8 rounded-2xl border border-[var(--hairline)] bg-white p-5">
+        <div className="mt-8 rounded-2xl border border-[var(--hairline)] bg-card p-5">
           <h3 className="text-[16px] text-[var(--ink)]">Next steps</h3>
           <ul className="mt-3 space-y-2 text-[14px] text-[var(--ink-secondary)]">
             <li>· Finish the lessons you skipped</li>
@@ -68,7 +68,7 @@ function Profile() {
 
 function Stat({ label, value, tnum }: { label: string; value: string; tnum?: boolean }) {
   return (
-    <div className="rounded-xl border border-[var(--hairline)] bg-white p-3 text-center">
+    <div className="rounded-xl border border-[var(--hairline)] bg-card p-3 text-center">
       <div className="eyebrow text-[10px]">{label}</div>
       <div className={`${tnum ? "tnum" : ""} mt-1 text-[16px] text-[var(--ink)]`}>{value}</div>
     </div>

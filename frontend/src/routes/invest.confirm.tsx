@@ -31,7 +31,7 @@ function Confirm() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background">
-      <div className="gradient-mesh absolute inset-x-0 top-0 h-[50vh] opacity-60" />
+      <div className="bg-card" />
       <Container className="relative z-10 pt-8">
         <BackButton />
         <div className="mt-16 text-center">

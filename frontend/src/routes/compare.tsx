@@ -24,7 +24,7 @@ function ComparePage() {
   return (
     <Shell>
       <Container className="pt-8">
-        <div className="eyebrow">Compare</div>
+
         <h1 className="display-lg mt-1">Three options. Plain English.</h1>
         <p className="mt-2 text-[14px] text-[var(--ink-mute)]">
           We've marked the one that fits your profile. You can pick anything.
@@ -37,7 +37,7 @@ function ComparePage() {
             return (
               <div
                 key={o.id}
-                className={`rounded-2xl border bg-white p-5 transition-all ${
+                className={`rounded-2xl border bg-card p-5 transition-all ${
                   isSel
                     ? "border-[var(--brand-indigo)] ring-2 ring-[var(--brand-indigo-subdued)]"
                     : "border-[var(--hairline)]"

@@ -31,7 +31,7 @@ function Success() {
             Mock-invested <span className="tnum text-[var(--ink)]">{formatINR(amount)}</span> in {opt.name}.
           </p>
 
-          <div className="mt-10 w-full max-w-sm rounded-2xl border border-[var(--hairline)] bg-white p-5 text-left shadow-sm">
+          <div className="mt-10 w-full max-w-sm rounded-2xl border border-[var(--hairline)] bg-card p-5 text-left shadow-sm">
             <div className="eyebrow">Receipt</div>
             <div className="mt-3 space-y-2 text-[14px]">
               <Row label="Amount" value={formatINR(amount)} tnum />

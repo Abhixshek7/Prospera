@@ -28,7 +28,7 @@ function Portfolio() {
     return (
       <Shell>
         <Container className="pt-12">
-          <div className="rounded-2xl border border-dashed border-[var(--hairline)] bg-white p-8 text-center">
+          <div className="rounded-2xl border border-dashed border-[var(--hairline)] bg-card p-8 text-center">
             <div className="text-5xl">🌱</div>
             <h2 className="display-lg mt-4">No investments yet</h2>
             <p className="mt-2 text-[14px] text-[var(--ink-mute)]">
@@ -45,9 +45,9 @@ function Portfolio() {
 
   return (
     <Shell>
-      <div className="gradient-mesh h-40" />
+      <div className=" h-40" />
       <Container className="-mt-28">
-        <div className="rounded-2xl border border-[var(--hairline)] bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-[var(--hairline)] p-5 shadow-sm">
           <div className="eyebrow">Current value</div>
           <div className="tnum mt-1 text-4xl font-light text-[var(--ink)]">{formatINR(current)}</div>
           <div className="mt-2 inline-flex items-center gap-1 text-[13px]" style={{ color: pnl >= 0 ? "var(--success)" : "var(--brand-ruby)" }}>
@@ -84,7 +84,7 @@ function Portfolio() {
             const cur = h.amount * (1 + (opt.expectedReturn / 100) * (days / 365));
             const pn = cur - h.amount;
             return (
-              <div key={i} className="rounded-2xl border border-[var(--hairline)] bg-white p-4">
+              <div key={i} className="rounded-2xl border border-[var(--hairline)] bg-card p-4">
                 <div className="flex items-baseline justify-between">
                   <div>
                     <div className="text-[15px] text-[var(--ink)]">{opt.name}</div>

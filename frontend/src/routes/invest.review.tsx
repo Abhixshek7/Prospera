@@ -55,7 +55,7 @@ function Review() {
 
 function Row({ label, value, editTo, tnum }: { label: string; value: string; editTo?: string; tnum?: boolean }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl border border-[var(--hairline)] bg-white px-5 py-4">
+    <div className="flex items-center justify-between rounded-2xl border border-[var(--hairline)] bg-card px-5 py-4">
       <div className="text-[13px] text-[var(--ink-mute)]">{label}</div>
       <div className="flex items-center gap-3">
         <div className={`${tnum ? "tnum" : ""} text-[15px] text-[var(--ink)]`}>{value}</div>

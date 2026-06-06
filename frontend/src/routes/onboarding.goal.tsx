@@ -31,7 +31,7 @@ function GoalPage() {
           <ProgressDots step={2} total={4} />
           <div className="w-12" />
         </div>
-        <div className="mt-12">
+        <div className="mt-8">
           <div className="eyebrow mb-3">Step 2 of 4</div>
           <h1 className="display-xl">
             {name ? `${name}, what's` : "What's"} this money for?
@@ -50,7 +50,7 @@ function GoalPage() {
                   className={`w-full rounded-2xl border p-5 text-left transition-all ${
                     active
                       ? "border-[var(--brand-indigo)] bg-[var(--brand-indigo-subdued)]/20"
-                      : "border-[var(--hairline)] bg-white hover:border-[var(--brand-indigo-soft)]"
+                      : "border-[var(--hairline)] bg-card hover:border-[var(--brand-indigo-soft)]"
                   }`}
                 >
                   <div className="flex items-start gap-4">
