@@ -53,8 +53,8 @@ export function SharedTopbar({
   onLogout,
 }: SharedTopbarProps) {
   return (
-    <div className="sticky top-0 z-50 px-4 sm:px-6 shrink-0 mb-4 h-18 pointer-events-none transition-all duration-300 bg-background pt-4 pb-2">
-      <header className="flex h-14 w-full items-center gap-4 border border-border/40 rounded-[2rem] bg-sidebar backdrop-blur-xl px-4 shadow-md dark:shadow-primary/5 pointer-events-auto">
+    <div className="fixed top-0 left-0 right-0 md:left-60 z-50 px-4 sm:px-6 shrink-0 transition-all duration-300 bg-background pt-4 pb-2">
+      <header className="flex h-14 w-full items-center gap-4 border border-border/40 rounded-[2rem]  bg-sidebar backdrop-blur-xl px-4 shadow-md dark:shadow-primary/5 pointer-events-auto">
         {/* Brand - Mobile Only (Visible when md:hidden) */}
         <Link to={brandLink as any} className="flex md:hidden items-center gap-2">
           <Shield className="h-5 w-5 text-primary" />

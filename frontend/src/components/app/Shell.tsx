@@ -40,9 +40,9 @@ export function Shell({
 
       {/* Main content column */}
       <div className={`flex flex-col flex-1 min-w-0 ${!hideNav ? "md:ml-60" : ""}`}>
-        {/* Topbar — only shown on desktop (md+), replaced by dock label on mobile */}
+        {/* Topbar — shown on all viewports when enabled */}
         {!hideTopbar && !hideNav && (
-          <div className="hidden md:block w-full">
+          <div className="w-full">
             <SharedTopbar
               brandLink="/learn"
               brandTitle="Prospera"
@@ -61,7 +61,17 @@ export function Shell({
           </div>
         )}
 
-        <main className={hideNav ? "pb-8" : "pb-28 md:pb-8"}>{children}</main>
+        <main
+          className={
+            hideNav
+              ? "pt-20 pb-8"
+              : !hideTopbar
+              ? "pt-20 pb-28 md:pb-8"
+              : "pb-28 md:pb-8"
+          }
+        >
+          {children}
+        </main>
       </div>
 
       {/* Mobile/tablet dock — hidden on desktop */}
