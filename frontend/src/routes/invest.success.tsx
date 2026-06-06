@@ -20,7 +20,7 @@ function Success() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background">
-      <div className="gradient-mesh absolute inset-x-0 top-0 h-[60vh]" />
+      <div className="absolute inset-x-0 top-0 h-[60vh]" />
       <Container className="relative z-10 flex min-h-screen flex-col pt-8">
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           <div className="text-7xl">🌱</div>

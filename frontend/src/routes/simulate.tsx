@@ -5,6 +5,8 @@ import { useInvestStore } from "@/lib/stores";
 import { calculateProjection, getOptionById } from "@/lib/mock-data";
 import { formatINR } from "@/lib/stores";
 import { Pill } from "@/components/app/Pill";
+import { ReviewModal } from "@/components/invest/ReviewModal";
+import { ConfirmModal } from "@/components/invest/ConfirmModal";
 import { Warning } from "@/components/app/Insight";
 import { Mounted } from "@/components/app/Mounted";
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
@@ -27,6 +29,8 @@ function Sim() {
 
   const data = useMemo(() => calculateProjection(amount, opt, years), [amount, opt, years]);
   const final = data[data.length - 1];
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
 
   return (
     <Shell>
@@ -131,9 +135,11 @@ function Sim() {
         )}
 
         <div className="mt-8 mb-6">
-          <Pill onClick={() => nav({ to: "/invest/review" })} className="w-full py-3">
+          <Pill onClick={() => setReviewOpen(true)} className="w-full py-3">
             Mock invest {formatINR(amount)} →
           </Pill>
+          <ReviewModal open={reviewOpen} onOpenChange={setReviewOpen} onContinue={() => { setReviewOpen(false); setConfirmOpen(true); }} />
+          <ConfirmModal open={confirmOpen} onOpenChange={setConfirmOpen} />
           <p className="mt-2 text-center text-[12px] text-[var(--ink-mute)]">
             No real money. This is a practice run.
           </p>
