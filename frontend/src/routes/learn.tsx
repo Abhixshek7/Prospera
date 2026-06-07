@@ -22,7 +22,19 @@ function LearnPage() {
   return (
     <Shell>
       <div className=" h-10" />
+      
       <Container className="">
+         <div className="mt-4 mb-8 rounded-2xl bg-[var(--canvas-cream)] p-6">
+          <div className="eyebrow">Ready when you are</div>
+          <h3 className="mt-1 text-[20px] text-[var(--ink)]">Compare your three options</h3>
+          <p className="mt-1 text-[14px] text-[var(--ink-secondary)]">
+            See FD vs Index Fund vs Stock — side by side, plain English.
+          </p>
+          <div className="mt-4">
+            <PillLink to="/compare">Compare options →</PillLink>
+          </div>
+        </div>
+
         <div className="rounded-2xl border border-[var(--hairline)] bg-card p-5 shadow-sm">
           <div className="eyebrow">{name ? `Hey, ${name}` : "Welcome"}</div>
           <h1 className="display-lg mt-1">Learn the basics first.</h1>
@@ -74,16 +86,7 @@ function LearnPage() {
           })}
         </div>
 
-        <div className="mt-8 rounded-2xl bg-[var(--canvas-cream)] p-6">
-          <div className="eyebrow">Ready when you are</div>
-          <h3 className="mt-1 text-[20px] text-[var(--ink)]">Compare your three options</h3>
-          <p className="mt-1 text-[14px] text-[var(--ink-secondary)]">
-            See FD vs Index Fund vs Stock — side by side, plain English.
-          </p>
-          <div className="mt-4">
-            <PillLink to="/compare">Compare options →</PillLink>
-          </div>
-        </div>
+       
       </Container>
     </Shell>
   );
